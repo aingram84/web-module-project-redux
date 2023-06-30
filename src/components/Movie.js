@@ -20,7 +20,7 @@ const Movie = (props) => {
     }
 
     const handleFav = () => {
-        props.addFavorite(movie.id);
+        props.addFavorite(movie);
         // push("/favorites");
     }
     
@@ -53,7 +53,7 @@ const Movie = (props) => {
                         </section>
                         
                         <section>
-                            <span className="m-2 btn btn-dark" onClick={handleFav}>Favorite</span>
+                            {displayFavorites && <span className="m-2 btn btn-dark" onClick={handleFav}>Favorite</span>}
                             <span className="delete"><input type="button" className="m-2 btn btn-danger" value="Delete" onClick={handleClick}/></span>
                         </section>
                     </div>
